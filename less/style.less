@@ -1,0 +1,287 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+
+//Header
+
+.header{
+	text-align: center;
+	height: 100vh;
+	background-color: #c4cdd6;
+	margin: 0 auto;
+	position: relative;
+}
+.button{
+	position:absolute;
+	top:50%;
+	left: 43%;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 15px 25px;
+	background-color: #ff891e;
+	border: none;
+	border-radius: 3px;
+	&:active, &:hover, &:focus {
+	    outline: 0;
+	    outline-offset: 0;
+	}
+	&-section{
+		padding: 10px 25px;
+		text-transform: uppercase;
+		border: none;
+		border-radius: 3px;
+		margin-top: 30px;
+		&:active, &:hover, &:focus {
+		    outline: 0;
+		    outline-offset: 0;
+		}
+	}
+	&-more{
+		background-color: #ff891e;
+		color:#fff;
+		margin-right: 20px;
+	}
+	&-stock{
+		background-color: transparent;
+		border: 1px solid #000;
+	}
+}
+.section{
+	color: #000;
+	&-one{
+		background: url(../img/section/slider_1.png) no-repeat center;
+		background-size: cover;
+		padding-bottom: 20px;
+	}
+	&-two{
+		background: url(../img/section/slider_2.png) no-repeat center;
+		background-size: cover;
+		padding-bottom: 20px;
+	}
+	&-three{
+		background: url(../img/section/slider_4.png) no-repeat center;
+		background-size: cover;
+		padding-bottom: 20px;
+	}
+	&-four{
+		background: url(../img/section/slider_3.png) no-repeat center;
+		background-size: cover;
+		padding-bottom: 20px;
+	}
+	&-title{
+		padding-top: 200px;
+		font-size: 35px;
+		line-height: 45px;
+	}
+	&-paragraph{
+		padding-top: 5px;
+		font-size: 25px;
+		margin: 0;
+	}
+}
+
+
+//Скрытые элементы
+.test{
+	display: none;
+}
+.white{
+	display: none;
+}
+.display{
+	&-none{
+		display: none;
+	}
+}
+
+
+
+.slider{
+	&-block{
+		margin-top: 145px;
+		color: #fff;
+		position:relative;
+		padding: 10px;
+		&-op{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		&-bg{
+			background-color: #000;
+			display: block;
+			background-color: #000;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.15;
+			z-index: 0;
+			border-radius: 3px;
+			&-active{
+				opacity: 0.6;
+			}
+		}
+	}
+	&-content{
+		position:relative;
+		z-index: 2;
+	}
+	&-img{
+		vertical-align: middle;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		border-radius: 3px;
+		margin-right: 8px;
+	}
+	&-paragraph{
+		font-size: 9px;
+		margin: 0;
+	}
+	&-title{
+		font-size:12px;
+		font-weight: bold;
+	}
+}
+
+//Slider
+
+.swiper{
+	&-pagination{
+		display: none;
+	}
+	&-button{
+		&-prev{
+			color:#fff;
+			width: 75px;
+			 height: 85px;
+			 background: #000;
+			 border-radius: 3px;
+			 opacity: 0.2;
+		}
+		&-next{
+			color:#fff;
+			width: 75px;
+			 height: 85px;
+			 background: #000;
+			 border-radius: 3px;
+			 opacity: 0.2;
+		}
+	}
+}
+
+
+
+//Media
+
+@media(max-width: 1400px) {
+	.button{
+		left: 40%;
+	}
+}
+
+@media(max-width: 1200px) {
+	.section{
+		&-title{
+			font-size:30px;
+		}
+		&-paragraph{
+			font-size:20px;
+		}
+	}
+}
+
+@media(max-width: 800px) {
+	.button{
+		left: 35%;
+		&-stock{
+			display: none;
+		}
+	}
+	.section{
+		position:relative;
+		text-align: center;
+		&-paragraph{
+			display: none;
+		}
+		&-one{
+			background-position:  center left -160px;
+			padding-bottom: 220px;
+		}
+		&-two{
+			background-position:  center left -150px;
+			padding-bottom: 220px;
+		}
+		&-three{
+			background-position:  center left -150px;
+			padding-bottom: 220px; 
+		}
+		&-four{
+			background-position:  center left -150px;
+			padding-bottom: 220px; 
+		}
+	}
+	.test{
+		display: block;
+	}
+	.white{
+		display: block;
+		background-color: #fff;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.6;
+		z-index: 0;
+	}
+	.slider{
+		&-block{
+			display: none;
+		}
+	}
+
+	.swiper{
+		&-button{
+			&-prev{
+				display: none;
+			}
+			&-next{
+				display: none;
+			}
+		}
+		&-pagination{
+			display: block;
+		}
+
+	}
+}
+
+@media(max-width: 400px) {
+	.button{
+		left: 11%;
+	}
+	.section{
+		&-one{
+			background-position:  center left -380px;
+			padding-bottom: 100px;
+		}
+		&-two{
+			background-position:  center left -340px;
+			padding-bottom: 100px;
+		}
+		&-three{
+			background-position:  center left -340px;
+			padding-bottom: 100px; 
+		}
+		&-four{
+			background-position:  center left -380px;
+			padding-bottom: 100px; 
+		}
+	}
+}
